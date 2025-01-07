@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Loading Screen</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #logo {
+            max-width: 20%;
+            max-height: 20%;
+            animation: spin 5s linear infinite;
+            object-fit: contain;
+        }
+
+        #bottom-image {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            max-width: 80%;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="logo.png" alt="Server Logo">
+    <img id="bottom-image" src="image.png" alt="Surf Server Image">
+</body>
+</html>
